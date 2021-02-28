@@ -1,0 +1,21 @@
+#include<stdio.h>
+int sum_of_digits (int);
+int main()
+{
+	int number,sum=0;
+	printf("enter any number:");
+	scanf("%d",&number);
+	sum =sum_of_digits(number);
+	printf("sum of digits of given numbers=%d", sum);
+	return 0;
+}
+int sum_of_digits (int number)
+{
+	int remainder, sum;
+	for (sum=0; number >0;number=number/10)
+	{
+		remainder=number % 10;
+		sum =sum + remainder ;
+	}
+return sum;	
+}
